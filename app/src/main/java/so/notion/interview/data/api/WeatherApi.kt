@@ -6,10 +6,11 @@ import retrofit2.http.Query
 import so.notion.interview.data.model.WeatherResponse
 
 interface WeatherApi {
-    @GET("data/2.5/weather?")
+    @GET("data/2.5/weather")
     fun getWeatherByCoords(
         @Query("lat") lat: Double,
         @Query("lon") lon: Double,
-        @Query("api_key") api_key: String
-        ): Single<WeatherResponse>
+        @Query("exclude") exclude: String = "minutely,hourly,alerts",
+        @Query("appid") apiKey: String
+    ): Single<WeatherResponse>
 }
