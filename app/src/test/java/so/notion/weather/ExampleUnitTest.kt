@@ -1,4 +1,4 @@
-package so.notion.interview
+package so.notion.weather
 
 import org.junit.Test
 

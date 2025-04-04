@@ -1,21 +1,17 @@
-package so.notion.interview
+package so.notion.weather
 
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.material3.Text
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.w3c.dom.Text
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
-import so.notion.interview.data.api.WeatherApi
-import so.notion.interview.data.model.WeatherResponse
+import so.notion.interview.R
+import so.notion.weather.data.api.WeatherApi
 
 class MainActivity : ComponentActivity() {
     private lateinit var api: WeatherApi

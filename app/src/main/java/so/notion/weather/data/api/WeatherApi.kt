@@ -1,9 +1,9 @@
-package so.notion.interview.data.api
+package so.notion.weather.data.api
 
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
-import so.notion.interview.data.model.WeatherResponse
+import so.notion.weather.data.model.WeatherResponse
 
 interface WeatherApi {
     @GET("data/2.5/weather")

@@ -1,4 +1,4 @@
-package so.notion.interview.data.model
+package so.notion.weather.data.model
 
 data class WeatherResponse(
     val name: String,
