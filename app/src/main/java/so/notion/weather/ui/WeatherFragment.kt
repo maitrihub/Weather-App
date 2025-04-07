@@ -17,7 +17,7 @@ class WeatherFragment : Fragment() {
     private val viewModel: MainViewModel by viewModels()
     private val lat = 40.7128
     private val lon = -74.0060
-    private val apiKey = "dda3a0a36330226ebe8e745cd1971571"
+    private val apiKey = "insert key here"
 
     override fun onCreateView(
         inflater: LayoutInflater,
