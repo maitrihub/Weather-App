@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Notion Interview"
+rootProject.name = "May's Weather App"

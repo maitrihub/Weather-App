@@ -10,7 +10,6 @@ interface WeatherApi {
     fun getWeatherByCoords(
         @Query("lat") lat: Double,
         @Query("lon") lon: Double,
-        @Query("exclude") exclude: String = "minutely,hourly,alerts",
         @Query("appid") apiKey: String
     ): Single<WeatherResponse>
 }

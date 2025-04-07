@@ -3,15 +3,16 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlinx-serialization'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
-    namespace "so.notion.interview"
+    namespace "so.notion.weather"
 
     compileSdk 34
 
     defaultConfig {
-        applicationId "so.notion.interview"
+        applicationId "so.notion.weather"
         minSdkVersion 24
         targetSdk 34
         versionCode 1
@@ -22,6 +23,7 @@ android {
 
     buildFeatures {
         compose true
+        viewBinding true
     }
 
     buildTypes {
@@ -116,6 +118,10 @@ dependencies {
     implementation 'androidx.compose.material3:material3'
     implementation 'androidx.compose.ui:ui-tooling-preview'
     debugImplementation 'androidx.compose.ui:ui-tooling'
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:2.51.1"
+    kapt "com.google.dagger:hilt-compiler:2.51.1"
 
     // Testing
     testImplementation 'junit:junit:4.13.2'
