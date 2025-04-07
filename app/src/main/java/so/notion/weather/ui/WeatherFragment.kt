@@ -36,9 +36,11 @@ class WeatherFragment : Fragment() {
             viewModel.weather.observe(viewLifecycleOwner) {
                 binding.city.text = it.name
                 val text = (String.format("%.2f",((it.main.temp - 273.15)*1.8 + 32)))
+                val feels_like =  (String.format("%.2f",((it.main.feels_like - 273.15)*1.8 + 32)))
                 binding.temp.text = "$text°F"
                 binding.description.text = "${it.weather.firstOrNull()?.description}"
-                binding.wind.text = "${it.wind.speed} km/s"
+                binding.feelsLike.text = "Feels Like: ${feels_like}°F"
+                binding.wind.text = "Wind: ${it.wind.speed} km/s"
             }
 
         } catch (e: Exception) {
